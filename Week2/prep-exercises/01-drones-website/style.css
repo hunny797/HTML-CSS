@@ -1,0 +1,141 @@
+* {
+    box-sizing:border-box;
+    list-style: none;
+}
+main {
+    min-width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+header {
+    background-color: blue;
+    border: 2px solid red;
+    
+}
+
+h1, h2 {
+    background-color: aqua;
+    border: 2px solid green;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.flexbox-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h3 {
+    padding-right: 5px;
+}
+img {
+    max-width: 100%;
+}
+
+.grid-list {
+    display: grid;
+    
+}
+
+@media screen and (min-device-width: 601px) and (max-device-width: 1024px)  {
+    
+    main {
+        max-width: 100%;
+    }
+    
+    h1, h2 {
+    
+        width: auto;
+    }
+   
+    .flexbox-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 1px solid red;
+        
+    }
+
+    
+    img {
+        max-width:100%;
+    }
+
+    .flexbox-item:nth-child(-n+2) {
+        flex: 0 0 50%;
+        }
+
+    .flexbox-item:nth-child(n+3) {
+        max-width: 33%;
+    }
+
+    .grid-section {
+        max-width: 100%;
+    }
+    .grid-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        
+    }
+
+    .grid-item:nth-child(-n+2) {
+        grid-column: auto / span 3;
+        
+    }
+    .grid-item:nth-child(n+3) {
+        grid-column: auto / span 2;
+    }
+
+}
+
+@media screen and (min-device-width: 1025px) {
+    
+    main {
+        min-width: 100%;
+    }
+    
+    h1, h2 {
+    
+        width: auto;
+    }
+   
+    .flexbox-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    
+    img {
+        max-width:100%;
+    }
+
+    .flexbox-item:nth-child(-n+2) {
+        flex: 0 0 50%;
+    }
+
+    .flexbox-item:nth-child(n+2) {
+        max-width: 25%;
+    }
+
+    .grid-section {
+        max-width: 100%;
+        }
+    .grid-list {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .grid-item:nth-child(-n+1) {
+        grid-column: auto / span 6;
+    }
+    .grid-item:nth-child(n+2) {
+        grid-column: auto / span 3;
+    }
+
+}
+
+
